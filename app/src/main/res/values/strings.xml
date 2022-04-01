@@ -4,9 +4,9 @@
     <string name="panjang">Masukan panjang (cm)</string>
     <string name="lebar">Masukan lebar (cm)</string>
     <string name="hitungApa">Apa yang ingin anda hitung?</string>
-    <string name="rbKeliling">Keliling</string>
+    <string name="rbKeliling">Keliling (cm)</string>
     <string name="rbLuas">Luas (cm²)</string>
-    <string name="hitung">Hitung (cm)</string>
+    <string name="hitung">Hitung</string>
     <string name="hasil_x">Hasil: %1$s</string>
     <string name="panjang_invalid">Panjang tidak boleh kosong.</string>
     <string name="lebar_invalid">Lebar tidak boleh kosong.</string>
