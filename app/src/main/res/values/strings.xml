@@ -1,13 +1,11 @@
 <resources>
     <string name="app_name">Hitung Persegi Panjang</string>
-    <string name="peringatan">Masukan terlebih dahulu panjang dan lebar persegi panjang yang akan di hitung luasnya atau kelilingnya!</string>
+    <string name="peringatan">Masukan terlebih dahulu panjang dan lebar persegi panjang yang akan di hitung luasnya dan kelilingnya!</string>
     <string name="panjang">Masukan panjang (cm)</string>
     <string name="lebar">Masukan lebar (cm)</string>
-    <string name="hitungApa">Apa yang ingin anda hitung?</string>
-    <string name="rbKeliling">Keliling (cm)</string>
-    <string name="rbLuas">Luas (cm²)</string>
     <string name="hitung">Hitung</string>
-    <string name="hasil_x">Hasil: %1$s</string>
+    <string name="hasil_luas">Luas: %1$s</string>
+    <string name="hasil_keliling">Keliling: %1$s</string>
     <string name="panjang_invalid">Panjang tidak boleh kosong.</string>
     <string name="lebar_invalid">Lebar tidak boleh kosong.</string>
     <string name="jenis_invalid">Pilih jenis hitungan.</string>
