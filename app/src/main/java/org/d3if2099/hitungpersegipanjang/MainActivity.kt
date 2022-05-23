@@ -1,56 +1,25 @@
 package org.d3if2099.hitungpersegipanjang
 
-import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
-import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
-import org.d3if2099.hitungpersegipanjang.databinding.ActivityMainBinding
-import org.d3if2099.hitungpersegipanjang.model.HasilHitung
-
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
 
-    private val viewModel: MainViewModel by lazy {
-        ViewModelProvider(this)[MainViewModel::class.java]
-    }
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        binding.button.setOnClickListener { hitungPersegiPanjang() }
-        viewModel.getHasilHitung().observe(this, { showResult(it) })
+        navController = findNavController(R.id.myNavHostFragment)
+        NavigationUI.setupActionBarWithNavController(this, navController)
     }
 
-
-    @SuppressLint("StringFormatMatches")
-    private fun hitungPersegiPanjang() {
-        val panjang = binding.panjangInp.text.toString()
-        if (TextUtils.isEmpty(panjang)) {
-            Toast.makeText(this, R.string.panjang_invalid, Toast.LENGTH_LONG).show()
-            return
-        }
-        val lebar = binding.lebarInp.text.toString()
-        if (TextUtils.isEmpty(lebar)) {
-            Toast.makeText(this, R.string.lebar_invalid, Toast.LENGTH_LONG).show()
-            return
-        }
-
-        viewModel.hitungPersegiPanjang(
-            panjang.toFloat(),
-            lebar.toFloat(),
-        )
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp()
     }
 
-    @SuppressLint("StringFormatMatches")
-    private fun showResult(result: HasilHitung?) {
-        if (result == null) return
-        binding.hasil1TextView.text = getString(R.string.hasil_luas, result.hasilLuas)
-        binding.hasil2TextView.text = getString(R.string.hasil_keliling, result.hasilKeliling)
-    }
 }

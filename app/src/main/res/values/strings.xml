@@ -4,10 +4,13 @@
     <string name="panjang">Masukan panjang (cm)</string>
     <string name="lebar">Masukan lebar (cm)</string>
     <string name="hitung">Hitung</string>
-    <string name="hasil_luas">Luas: %1$s</string>
-    <string name="hasil_keliling">Keliling: %1$s</string>
+    <string name="hasil_luas">Luas: %1$s cm2</string>
+    <string name="hasil_keliling">Keliling: %1$s cm</string>
     <string name="panjang_invalid">Panjang tidak boleh kosong.</string>
     <string name="lebar_invalid">Lebar tidak boleh kosong.</string>
     <string name="jenis_invalid">Pilih jenis hitungan.</string>
-
+    <string name="copyright">Hitung BMI merupakan sebuah aplikasi Android untuk menghitung body mass index (BMI) sehingga seseorang dapat mengetahui apakah berat badannya ideal, gemuk atau kurus.\n\nAplikasi ini dibuat untuk kelas Mobpro 1. Temukan kodenya di https://github.com/indraazimi/hitungbmi\n\nCopyright © 2021 Indra Azimi.\nAll rights reserved.</string>
+    <string name="share">Share</string>
+    <string name="bagikan_template">Hitung Persegi Panjang\nPanjang: %1$s cm kg\nLebar: %2$s cm\n\n%3$s \n%4$s</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
 </resources>

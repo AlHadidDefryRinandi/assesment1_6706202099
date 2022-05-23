@@ -1,4 +1,4 @@
-package org.d3if2099.hitungpersegipanjang
+package org.d3if2099.hitungpersegipanjang.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
