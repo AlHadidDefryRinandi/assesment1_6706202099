@@ -1,12 +1,20 @@
 package org.d3if2099.hitungpersegipanjang.ui.histori
 
 import android.graphics.drawable.GradientDrawable
+import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.d3if2099.hitungpersegipanjang.R
 import org.d3if2099.hitungpersegipanjang.databinding.ItemHistoriBinding
 import org.d3if2099.hitungpersegipanjang.db.PersegiPanjangEntity
@@ -44,9 +52,12 @@ class HistoriAdapter :
         holder.bind(getItem(position))
     }
 
+
     class ViewHolder(
         private val binding: ItemHistoriBinding
     ) : RecyclerView.ViewHolder(binding.root) {
+
+
         private val dateFormatter = SimpleDateFormat(
             "dd MMMM yyyy",
             Locale("id", "ID")
@@ -73,7 +84,13 @@ class HistoriAdapter :
                 R.string.data_x,
                 item.panjang, item.lebar
             )
+            root.setOnClickListener {
+                binding.hapusButton.visibility = View.VISIBLE
+            }
+
         }
+
+
     }
 
 }
