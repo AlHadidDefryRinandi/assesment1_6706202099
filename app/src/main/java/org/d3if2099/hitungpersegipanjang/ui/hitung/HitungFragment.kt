@@ -1,9 +1,10 @@
-package org.d3if2099.hitungpersegipanjang.ui
+package org.d3if2099.hitungpersegipanjang.ui.hitung
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -11,15 +12,19 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import org.d3if2099.hitungpersegipanjang.R
 import org.d3if2099.hitungpersegipanjang.databinding.FragmentHitungBinding
+import org.d3if2099.hitungpersegipanjang.db.PersegiPanjangDb
 import org.d3if2099.hitungpersegipanjang.model.HasilHitung
+import org.d3if2099.hitungpersegipanjang.ui.HitungViewModel
 
 
 class HitungFragment : Fragment() {
 
     private lateinit var binding: FragmentHitungBinding
 
-    private val viewModel: MainViewModel by lazy {
-        ViewModelProvider(requireActivity())[MainViewModel::class.java]
+    private val viewModel: HitungViewModel by lazy {
+        val db = PersegiPanjangDb.getInstance(requireContext())
+        val factory = HitungViewModelFactory(db.dao)
+        ViewModelProvider(this, factory)[HitungViewModel::class.java]
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -56,10 +61,19 @@ class HitungFragment : Fragment() {
         inflater.inflate(R.menu.options_menu, menu)
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu_about) {
-            findNavController().navigate(
-                R.id.action_hitungFragment_to_aboutFragment)
-            return true
+        when(item.itemId) {
+            R.id.menu_histori -> {
+                findNavController().navigate(
+                R.id.action_hitungFragment_to_historiFragment
+                )
+                return true
+            }
+            R.id.menu_about -> {
+                findNavController().navigate(
+                    R.id.action_hitungFragment_to_aboutFragment
+                )
+                return true
+            }
         }
         return super.onOptionsItemSelected(item)
     }

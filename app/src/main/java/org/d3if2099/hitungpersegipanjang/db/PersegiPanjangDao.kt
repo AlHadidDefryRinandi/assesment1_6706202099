@@ -9,6 +9,7 @@ import androidx.room.Query
 interface PersegiPanjangDao {
     @Insert
     fun insert(hasil: PersegiPanjangEntity)
-    @Query("SELECT * FROM hasil ORDER BY id DESC LIMIT 1")
-    fun getLastPersegiPanjang(): LiveData<PersegiPanjangEntity?>
+    @Query("SELECT * FROM hasil ORDER BY id DESC")
+    fun getLastPersegiPanjang(): LiveData<List<PersegiPanjangEntity>>
+
 }

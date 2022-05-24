@@ -13,4 +13,8 @@
     <string name="share">Share</string>
     <string name="bagikan_template">Hitung Persegi Panjang\nPanjang: %1$s cm kg\nLebar: %2$s cm\n\n%3$s \n%4$s</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="belum_ada_data">Belum ada data</string>
+    <string name="histori">Histori</string>
+    <string name="hasil_x">Luas: %1$.2f cm2 - Keliling: %2$s cm</string>
+    <string name="data_x">Panjang: %1$.1f cm - Lebar: %2$.1f cm </string>
 </resources>
