@@ -1,0 +1,22 @@
+[
+    {
+        "nama": "bendera",
+        "gambar": "bendera.jpg" 
+    },
+    {
+        "nama": "lemari",
+        "gambar": "lemari.jpg"
+    },
+    {
+        "nama": "papan-tulis",
+        "gambar": "papan-tulis.jpg"
+    },
+    {
+        "nama": "tv",
+        "gambar": "tv.jpg"
+    },
+    {
+        "nama": "penggaris",
+        "gambar": "penggaris.jpg"
+    }
+]
