@@ -36,6 +36,7 @@
                 android:id="@+id/panjang_inp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
                 android:hint="@string/panjang" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -52,6 +53,7 @@
                 android:id="@+id/lebar_inp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
                 android:hint="@string/lebar" />
 
         </com.google.android.material.textfield.TextInputLayout>

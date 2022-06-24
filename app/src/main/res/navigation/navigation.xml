@@ -14,6 +14,9 @@
             android:id="@+id/action_hitungFragment_to_aboutFragment"
             app:destination="@id/aboutFragment" />
         <action
+            android:id="@+id/action_hitungFragment_to_objekPersegiPanjangFragment"
+            app:destination="@id/objekPersegiPanjangFragment" />
+        <action
             android:id="@+id/action_hitungFragment_to_historiFragment"
             app:destination="@id/historiFragment" />
     </fragment>
@@ -21,6 +24,10 @@
         android:id="@+id/aboutFragment"
         android:name="org.d3if2099.hitungpersegipanjang.ui.AboutFragment"
         android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/objekPersegiPanjangFragment"
+        android:name="org.d3if2099.hitungpersegipanjang.ui.objek_persegi_panjang.ObjekPersegiPanjangFragment"
+        android:label="ObjekPersegiPanjang" />
     <fragment
         android:id="@+id/historiFragment"
         android:name="org.d3if2099.hitungpersegipanjang.ui.histori.HistoriFragment"

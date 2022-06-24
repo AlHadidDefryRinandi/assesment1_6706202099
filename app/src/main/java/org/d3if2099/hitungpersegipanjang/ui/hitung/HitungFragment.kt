@@ -74,6 +74,12 @@ class HitungFragment : Fragment() {
                 )
                 return true
             }
+            R.id.menu_objek_persegi_panjang -> {
+                findNavController().navigate(
+                    R.id.action_hitungFragment_to_objekPersegiPanjangFragment
+                )
+                return true
+            }
         }
         return super.onOptionsItemSelected(item)
     }
